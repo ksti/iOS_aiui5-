@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2yq-xK-bSL">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MSC DEMO-->
+        <scene sceneID="dFM-bp-16R">
+            <objects>
+                <tableViewController id="exW-en-Bnz" customClass="RootViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="61" sectionHeaderHeight="1" sectionFooterHeight="1" id="CjV-al-AC6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.36945707414622658" green="0.89833885732323226" blue="0.11253820438537834" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.14338487580000001" green="0.74990278050000003" blue="0.76685631789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle=" " footerTitle=" " id="FIH-O9-xXu">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="138" id="aPq-MJ-peD">
+                                        <rect key="frame" x="0.0" y="1" width="414" height="138"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aPq-MJ-peD" id="CWi-Dm-P2M">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="137.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ee-q8-zQU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                                                    <color key="backgroundColor" red="0.22551656818193833" green="0.22201319857307583" blue="0.22887073863636365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="138" id="U0g-Y8-5vo"/>
+                                                    </constraints>
+                                                    <string key="text">This MSC Demo demonstrates how to implement the IFLYTEK services through SDK for the iOS developers in IFLYTEK Open Platform,such as  Natural Language Understanding.</string>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="1ee-q8-zQU" secondAttribute="trailing" id="30d-vb-AC7"/>
+                                                <constraint firstItem="1ee-q8-zQU" firstAttribute="top" secondItem="CWi-Dm-P2M" secondAttribute="top" id="FyN-vr-A11"/>
+                                                <constraint firstItem="1ee-q8-zQU" firstAttribute="leading" secondItem="CWi-Dm-P2M" secondAttribute="leading" id="iKj-Yu-PRS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="  " footerTitle=" " id="jj1-r9-YQ7">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" textLabel="PMY-c9-e4S" rowHeight="60" style="IBUITableViewCellStyleDefault" id="3Aa-ue-0DB">
+                                        <rect key="frame" x="0.0" y="141" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Aa-ue-0DB" id="ISI-sP-P8e" userLabel="语义理解">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Natural Language Understanding" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PMY-c9-e4S">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="59.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Jfc-M5-SGE" kind="show" id="tzr-eF-UHx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="exW-en-Bnz" id="s8U-RI-IFX"/>
+                            <outlet property="delegate" destination="exW-en-Bnz" id="scd-xa-sO9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MSC DEMO" id="aqf-L1-HUv"/>
+                    <connections>
+                        <outlet property="tbView" destination="CjV-al-AC6" id="fyG-JP-Y4i"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aik-wZ-eEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2694.375" y="-407.74647887323943"/>
+        </scene>
+        <!--NLP-->
+        <scene sceneID="Rmi-4I-q33">
+            <objects>
+                <viewController id="Jfc-M5-SGE" customClass="UnderstandViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ojc-qQ-awg"/>
+                        <viewControllerLayoutGuide type="bottom" id="dlD-Ir-v1c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yKS-70-O60">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0b-HI-giT">
+                                <rect key="frame" x="5" y="519" width="192" height="49"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="MM3-QL-e51"/>
+                                    <constraint firstAttribute="height" constant="49" id="YXe-z0-pNV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onlinRecBtnHandler:" destination="Jfc-M5-SGE" eventType="touchUpInside" id="5S4-Xp-hbR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emS-sW-KN0">
+                                <rect key="frame" x="5" y="587" width="192" height="49"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Text">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTextBtnHandler:" destination="Jfc-M5-SGE" eventType="touchUpInside" id="y6d-Gb-OTx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dj-Ss-5Me">
+                                <rect key="frame" x="5" y="655" width="192" height="49"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="dmj-8u-fiK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Sync">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSyncBtnHandler:" destination="Jfc-M5-SGE" eventType="touchUpInside" id="kUi-cF-tDq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4J-SM-wNT">
+                                <rect key="frame" x="217" y="655" width="192" height="49"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Sync">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSyncSchemaBtnHandler:" destination="Jfc-M5-SGE" eventType="touchUpInside" id="UYs-c5-HkR"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aie-Rt-gjD">
+                                <rect key="frame" x="15" y="113" width="384" height="371"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON1-uX-VBn">
+                                <rect key="frame" x="217" y="519" width="192" height="49"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopBtnHandler:" destination="Jfc-M5-SGE" eventType="touchUpInside" id="yhs-Dr-xCV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5dj-Ss-5Me" firstAttribute="top" secondItem="emS-sW-KN0" secondAttribute="bottom" constant="19" id="0GL-ua-IH1"/>
+                            <constraint firstItem="K0b-HI-giT" firstAttribute="top" secondItem="aie-Rt-gjD" secondAttribute="bottom" constant="35" id="2M8-3z-Vof"/>
+                            <constraint firstItem="dlD-Ir-v1c" firstAttribute="top" secondItem="5dj-Ss-5Me" secondAttribute="bottom" constant="32" id="6UK-Lf-rZa"/>
+                            <constraint firstItem="5dj-Ss-5Me" firstAttribute="top" secondItem="c4J-SM-wNT" secondAttribute="top" id="6wl-w8-rdw"/>
+                            <constraint firstItem="K0b-HI-giT" firstAttribute="top" secondItem="ON1-uX-VBn" secondAttribute="top" id="DX9-Et-ok8"/>
+                            <constraint firstItem="aie-Rt-gjD" firstAttribute="centerX" secondItem="yKS-70-O60" secondAttribute="centerX" id="MHk-b0-lN9"/>
+                            <constraint firstItem="ON1-uX-VBn" firstAttribute="leading" secondItem="c4J-SM-wNT" secondAttribute="leading" id="MXB-HO-1zT"/>
+                            <constraint firstItem="K0b-HI-giT" firstAttribute="leading" secondItem="yKS-70-O60" secondAttribute="leadingMargin" constant="-15" id="PpW-du-lVL"/>
+                            <constraint firstItem="K0b-HI-giT" firstAttribute="baseline" secondItem="ON1-uX-VBn" secondAttribute="firstBaseline" id="Qzd-oU-2lI"/>
+                            <constraint firstItem="K0b-HI-giT" firstAttribute="trailing" secondItem="emS-sW-KN0" secondAttribute="trailing" id="RMh-yl-RaK"/>
+                            <constraint firstItem="ON1-uX-VBn" firstAttribute="baseline" secondItem="K0b-HI-giT" secondAttribute="firstBaseline" id="S6C-sl-oqQ"/>
+                            <constraint firstItem="emS-sW-KN0" firstAttribute="top" secondItem="K0b-HI-giT" secondAttribute="bottom" constant="19" id="Wx6-xN-8Tb"/>
+                            <constraint firstItem="ON1-uX-VBn" firstAttribute="leading" secondItem="K0b-HI-giT" secondAttribute="trailing" constant="20" id="aYN-Yg-k4f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ON1-uX-VBn" secondAttribute="trailing" constant="-15" id="cBl-zf-e3Y"/>
+                            <constraint firstItem="c4J-SM-wNT" firstAttribute="top" secondItem="ON1-uX-VBn" secondAttribute="bottom" constant="87" id="dBX-YV-LcT"/>
+                            <constraint firstItem="5dj-Ss-5Me" firstAttribute="baseline" secondItem="c4J-SM-wNT" secondAttribute="firstBaseline" id="g25-cZ-Mth"/>
+                            <constraint firstItem="aie-Rt-gjD" firstAttribute="top" secondItem="Ojc-qQ-awg" secondAttribute="bottom" constant="49" id="gyD-Dz-Pfn"/>
+                            <constraint firstItem="ON1-uX-VBn" firstAttribute="trailing" secondItem="c4J-SM-wNT" secondAttribute="trailing" id="gzz-i9-9lu"/>
+                            <constraint firstItem="K0b-HI-giT" firstAttribute="leading" secondItem="emS-sW-KN0" secondAttribute="leading" id="jm4-TU-IXS"/>
+                            <constraint firstItem="emS-sW-KN0" firstAttribute="trailing" secondItem="5dj-Ss-5Me" secondAttribute="trailing" id="nln-Lv-qsz"/>
+                            <constraint firstItem="c4J-SM-wNT" firstAttribute="baseline" secondItem="5dj-Ss-5Me" secondAttribute="firstBaseline" id="qS7-ol-hQV"/>
+                            <constraint firstItem="emS-sW-KN0" firstAttribute="leading" secondItem="5dj-Ss-5Me" secondAttribute="leading" id="rIP-xn-l1g"/>
+                            <constraint firstItem="aie-Rt-gjD" firstAttribute="leading" secondItem="yKS-70-O60" secondAttribute="leadingMargin" constant="-5" id="zfM-WN-QFe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="NLP" id="8lD-9J-gCd"/>
+                    <connections>
+                        <outlet property="onlineRecBtn" destination="K0b-HI-giT" id="1A6-q6-P08"/>
+                        <outlet property="stopBtn" destination="ON1-uX-VBn" id="lA5-JR-uko"/>
+                        <outlet property="textView" destination="aie-Rt-gjD" id="fbM-wF-3lB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jnZ-N3-azJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1957" y="-408"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fWp-Tw-wjd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2yq-xK-bSL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wse-BD-3rr">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="exW-en-Bnz" kind="relationship" relationship="rootViewController" id="hXO-Mg-BSP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="okV-cf-ReE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3381" y="-408"/>
+        </scene>
+    </scenes>
+</document>
