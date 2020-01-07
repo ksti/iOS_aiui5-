@@ -10,14 +10,14 @@
 //    self.automaticallyAdjustsScrollViewInsets = NO;
 //}
 
-#import "ChatDemoController2.h"
-#import "SSChatKeyBoardInputView2.h"
+#import "ChatDemoController3.h"
+#import "SSChatKeyBoardInputView3.h"
 #import "SSAddImage.h"
 #import "SSChatBaseCell.h"
 #import "SSKit.h"
 
 
-@interface ChatDemoController2 ()<SSChatKeyBoardInputViewDelegate,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,SSChatBaseCellDelegate>
+@interface ChatDemoController3 ()<SSChatKeyBoardInputViewDelegate,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,SSChatBaseCellDelegate>
 
 //聊天列表
 @property (strong, nonatomic) UIView    *mBackView;
@@ -25,7 +25,7 @@
 @property(nonatomic,strong)UITableView *mTableView;
 @property(nonatomic,strong)NSMutableArray *datas;
 //多媒体键盘
-@property(nonatomic,strong)SSChatKeyBoardInputView2 *mInputView;
+@property(nonatomic,strong)SSChatKeyBoardInputView3 *mInputView;
 //访问相册+摄像头
 @property(nonatomic,strong)SSAddImage *mAddImage;
 //当前用户
@@ -36,9 +36,12 @@
 //开始翻页的messageId
 @property(nonatomic,strong)NSString *startMsgId;
 
+//当前最后一个“我”发的消息
+@property(nonatomic,strong)SSChatMessage *currentMessageFromMe;
+
 @end
 
-@implementation ChatDemoController2
+@implementation ChatDemoController3
 
 -(instancetype)init{
     if(self = [super init]){
@@ -83,7 +86,7 @@
     self.navigationItem.title = @"~Title2~";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _mInputView = [SSChatKeyBoardInputView2 new];
+    _mInputView = [SSChatKeyBoardInputView3 new];
     _mInputView.delegate = self;
     [self.view addSubview:_mInputView];
     
@@ -193,7 +196,7 @@
 }
 
 //发送语音
--(void)SSChatKeyBoardInputViewBtnClick:(SSChatKeyBoardInputView2 *)view voicePath:(NSString *)voicePath time:(int)second{
+-(void)SSChatKeyBoardInputViewBtnClick:(SSChatKeyBoardInputView3 *)view voicePath:(NSString *)voicePath time:(int)second{
 
     cout(voicePath);
     SSChatMessage *message = [self.chatData generateTextMessageFromId:kCurrentId text:@"发来了一段语音"];
@@ -209,6 +212,33 @@
         //
         [self addNewMesseage:[self.chatData generateTextMessageFromId:kFromId text:@"测试回复"] animation:YES];
     });
+}
+
+//发送消息
+-(void)sendContinuousMessage:(SSChatMessage *)message{
+    if (message.messageFrom == SSChatMessageFromMe) {
+        if (self.currentMessageFromMe == message) {
+            [self updateCurrentMessage:self.currentMessageFromMe];
+            return;
+        }
+        self.currentMessageFromMe = message;
+    }
+    [self addNewMesseage:message animation:NO];
+}
+
+//更新消息
+-(void)updateCurrentMessage:(SSChatMessage *)message{
+    for(int i=0;i<self.datas.count;++i){
+        
+        SSChatMessagelLayout *layout = self.datas[i];
+        NSString *messageId = layout.chatMessage.messageId;
+        
+        if([messageId isEqualToString:message.messageId]){
+            [self.datas replaceObjectAtIndex:i withObject:layout];
+            break;
+        }
+    }
+    [self.mTableView reloadData];
 }
 
 #pragma mark - NIMChatManagerDelegate
@@ -245,17 +275,7 @@
 
 //消息发送完成 刷新本地列表
 -(void)sendMessage:(SSChatMessage *)message didCompleteWithError:(NSError *)error{
-    for(int i=0;i<self.datas.count;++i){
-        
-        SSChatMessagelLayout *layout = self.datas[i];
-        NSString *messageId = layout.chatMessage.messageId;
-        
-        if([messageId isEqualToString:message.messageId]){
-            [self.datas replaceObjectAtIndex:i withObject:layout];
-            break;
-        }
-    }
-    [self.mTableView reloadData];
+    [self updateCurrentMessage:message];
 }
 
 @end

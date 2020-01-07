@@ -28,6 +28,29 @@
 		6F1EAFDB23BEE8AB005BE8B8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1EAFDA23BEE8AB005BE8B8 /* Security.framework */; };
 		6F1EAFDD23BEE8E5005BE8B8 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1EAFDC23BEE8E5005BE8B8 /* libsqlite3.0.tbd */; };
 		6F1EAFDE23BEE911005BE8B8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AD045F581BB0EFB6004E3799 /* libz.tbd */; };
+		6F3685A323C2D9A500EF17F9 /* CustomVoiceLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3685A223C2D9A400EF17F9 /* CustomVoiceLoadingView.m */; };
+		6F3685A523C2F29800EF17F9 /* microphone_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F3685A423C2F29800EF17F9 /* microphone_background.jpg */; };
+		6F8EDA9023C1A79300EEC325 /* circleBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDA7F23C1A79300EEC325 /* circleBackground.png */; };
+		6F8EDA9123C1A79400EEC325 /* fill.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDA8023C1A79300EEC325 /* fill.png */; };
+		6F8EDA9223C1A79400EEC325 /* firstLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDA8123C1A79300EEC325 /* firstLine.png */; };
+		6F8EDA9323C1A79400EEC325 /* maskImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDA8223C1A79300EEC325 /* maskImage.png */; };
+		6F8EDA9423C1A79400EEC325 /* secondLine.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDA8323C1A79300EEC325 /* secondLine.png */; };
+		6F8EDA9523C1A79400EEC325 /* YSCNewVoiceWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8EDA8523C1A79300EEC325 /* YSCNewVoiceWaveView.m */; };
+		6F8EDA9623C1A79400EEC325 /* YSCVoiceLoadingCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8EDA8723C1A79300EEC325 /* YSCVoiceLoadingCircleView.m */; };
+		6F8EDA9723C1A79400EEC325 /* YSCVoiceWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8EDA8923C1A79300EEC325 /* YSCVoiceWaveView.m */; };
+		6F8EDA9823C1A79400EEC325 /* YSCVolumeQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8EDA8B23C1A79300EEC325 /* YSCVolumeQueue.m */; };
+		6F8EDA9923C1A79400EEC325 /* YSCVoiceWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8EDA8F23C1A79300EEC325 /* YSCVoiceWaveViewController.m */; };
+		6F8EDAAC23C1E2DE00EEC325 /* CustomVoiceSleepingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8EDAA623C1E2DD00EEC325 /* CustomVoiceSleepingView.m */; };
+		6F8EDAAD23C1E2DE00EEC325 /* CustomVoiceWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8EDAA823C1E2DE00EEC325 /* CustomVoiceWaveView.m */; };
+		6F8EDAAE23C1E2DE00EEC325 /* microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDAA923C1E2DE00EEC325 /* microphone.png */; };
+		6F8EDAAF23C1E2DE00EEC325 /* microphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDAAA23C1E2DE00EEC325 /* microphone@2x.png */; };
+		6F8EDAB023C1E2DE00EEC325 /* microphone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDAAB23C1E2DE00EEC325 /* microphone@3x.png */; };
+		6F8EDAB723C1E36900EEC325 /* voice_circle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDAB123C1E36600EEC325 /* voice_circle@3x.png */; };
+		6F8EDAB823C1E36900EEC325 /* voice_circle_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDAB223C1E36700EEC325 /* voice_circle_mask@2x.png */; };
+		6F8EDAB923C1E36900EEC325 /* voice_circle_mask@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDAB323C1E36700EEC325 /* voice_circle_mask@3x.png */; };
+		6F8EDABA23C1E36900EEC325 /* voice_circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDAB423C1E36800EEC325 /* voice_circle@2x.png */; };
+		6F8EDABB23C1E36900EEC325 /* voice_circle_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDAB523C1E36900EEC325 /* voice_circle_mask.png */; };
+		6F8EDABC23C1E36900EEC325 /* voice_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDAB623C1E36900EEC325 /* voice_circle.png */; };
 		6F99BF2223BDDF650032B6CC /* SSChatDatas.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F99BE5623BDDF630032B6CC /* SSChatDatas.m */; };
 		6F99BF2323BDDF650032B6CC /* SSChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F99BE5823BDDF630032B6CC /* SSChatMessage.m */; };
 		6F99BF2423BDDF650032B6CC /* SSChatMessagelLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F99BE5A23BDDF630032B6CC /* SSChatMessagelLayout.m */; };
@@ -303,6 +326,12 @@
 		6F99C15623BDEBDA0032B6CC /* YYTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F99C10223BDEBD90032B6CC /* YYTimer.m */; };
 		6F99C15723BDEBDA0032B6CC /* YYTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F99C10423BDEBD90032B6CC /* YYTransaction.m */; };
 		6F99C15823BDEBDA0032B6CC /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F99C10623BDEBD90032B6CC /* YYWeakProxy.m */; };
+		6FA6AE9A23C4193C00189923 /* microphone_mask.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FA6AE9923C4193C00189923 /* microphone_mask.jpg */; };
+		6FA6AEA123C448F800189923 /* ChatDemoController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6AEA023C448F700189923 /* ChatDemoController3.m */; };
+		6FA6AEA823C44E6500189923 /* start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6FA6AEA623C44E6400189923 /* start.mp3 */; };
+		6FA6AEA923C44E6500189923 /* stop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6FA6AEA723C44E6400189923 /* stop.mp3 */; };
+		6FA6AEB223C46EA900189923 /* CustomVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6AEAF23C46EA900189923 /* CustomVoiceView.m */; };
+		6FA6AEB323C46EA900189923 /* SSChatKeyBoardInputView3.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6AEB123C46EA900189923 /* SSChatKeyBoardInputView3.m */; };
 		6FF2A30023C03B7900F06FBC /* ChatDemoController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF2A2FE23C03B7900F06FBC /* ChatDemoController2.m */; };
 		6FF2A30323C06D1C00F06FBC /* SSChatKeyBoardInputView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF2A30123C06D1B00F06FBC /* SSChatKeyBoardInputView2.m */; };
 		6FF2A30B23C0919B00F06FBC /* SSChatKeyBordCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF2A30923C0919B00F06FBC /* SSChatKeyBordCustomView.m */; };
@@ -380,6 +409,37 @@
 		6F1EAFD823BEE849005BE8B8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		6F1EAFDA23BEE8AB005BE8B8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6F1EAFDC23BEE8E5005BE8B8 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		6F3685A123C2D9A400EF17F9 /* CustomVoiceLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomVoiceLoadingView.h; sourceTree = "<group>"; };
+		6F3685A223C2D9A400EF17F9 /* CustomVoiceLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomVoiceLoadingView.m; sourceTree = "<group>"; };
+		6F3685A423C2F29800EF17F9 /* microphone_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = microphone_background.jpg; sourceTree = "<group>"; };
+		6F8EDA7F23C1A79300EEC325 /* circleBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circleBackground.png; sourceTree = "<group>"; };
+		6F8EDA8023C1A79300EEC325 /* fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fill.png; sourceTree = "<group>"; };
+		6F8EDA8123C1A79300EEC325 /* firstLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firstLine.png; sourceTree = "<group>"; };
+		6F8EDA8223C1A79300EEC325 /* maskImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maskImage.png; sourceTree = "<group>"; };
+		6F8EDA8323C1A79300EEC325 /* secondLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = secondLine.png; sourceTree = "<group>"; };
+		6F8EDA8423C1A79300EEC325 /* YSCNewVoiceWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCNewVoiceWaveView.h; sourceTree = "<group>"; };
+		6F8EDA8523C1A79300EEC325 /* YSCNewVoiceWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCNewVoiceWaveView.m; sourceTree = "<group>"; };
+		6F8EDA8623C1A79300EEC325 /* YSCVoiceLoadingCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCVoiceLoadingCircleView.h; sourceTree = "<group>"; };
+		6F8EDA8723C1A79300EEC325 /* YSCVoiceLoadingCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCVoiceLoadingCircleView.m; sourceTree = "<group>"; };
+		6F8EDA8823C1A79300EEC325 /* YSCVoiceWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCVoiceWaveView.h; sourceTree = "<group>"; };
+		6F8EDA8923C1A79300EEC325 /* YSCVoiceWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCVoiceWaveView.m; sourceTree = "<group>"; };
+		6F8EDA8A23C1A79300EEC325 /* YSCVolumeQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCVolumeQueue.h; sourceTree = "<group>"; };
+		6F8EDA8B23C1A79300EEC325 /* YSCVolumeQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCVolumeQueue.m; sourceTree = "<group>"; };
+		6F8EDA8E23C1A79300EEC325 /* YSCVoiceWaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSCVoiceWaveViewController.h; sourceTree = "<group>"; };
+		6F8EDA8F23C1A79300EEC325 /* YSCVoiceWaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSCVoiceWaveViewController.m; sourceTree = "<group>"; };
+		6F8EDAA523C1E2DD00EEC325 /* CustomVoiceSleepingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomVoiceSleepingView.h; sourceTree = "<group>"; };
+		6F8EDAA623C1E2DD00EEC325 /* CustomVoiceSleepingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomVoiceSleepingView.m; sourceTree = "<group>"; };
+		6F8EDAA723C1E2DE00EEC325 /* CustomVoiceWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomVoiceWaveView.h; sourceTree = "<group>"; };
+		6F8EDAA823C1E2DE00EEC325 /* CustomVoiceWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomVoiceWaveView.m; sourceTree = "<group>"; };
+		6F8EDAA923C1E2DE00EEC325 /* microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphone.png; sourceTree = "<group>"; };
+		6F8EDAAA23C1E2DE00EEC325 /* microphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone@2x.png"; sourceTree = "<group>"; };
+		6F8EDAAB23C1E2DE00EEC325 /* microphone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone@3x.png"; sourceTree = "<group>"; };
+		6F8EDAB123C1E36600EEC325 /* voice_circle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice_circle@3x.png"; sourceTree = "<group>"; };
+		6F8EDAB223C1E36700EEC325 /* voice_circle_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice_circle_mask@2x.png"; sourceTree = "<group>"; };
+		6F8EDAB323C1E36700EEC325 /* voice_circle_mask@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice_circle_mask@3x.png"; sourceTree = "<group>"; };
+		6F8EDAB423C1E36800EEC325 /* voice_circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice_circle@2x.png"; sourceTree = "<group>"; };
+		6F8EDAB523C1E36900EEC325 /* voice_circle_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voice_circle_mask.png; sourceTree = "<group>"; };
+		6F8EDAB623C1E36900EEC325 /* voice_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voice_circle.png; sourceTree = "<group>"; };
 		6F99BE5523BDDF630032B6CC /* SSChatDatas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSChatDatas.h; sourceTree = "<group>"; };
 		6F99BE5623BDDF630032B6CC /* SSChatDatas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSChatDatas.m; sourceTree = "<group>"; };
 		6F99BE5723BDDF630032B6CC /* SSChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSChatMessage.h; sourceTree = "<group>"; };
@@ -801,6 +861,15 @@
 		6F99C10523BDEBD90032B6CC /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
 		6F99C10623BDEBD90032B6CC /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
 		6F99C10723BDEBD90032B6CC /* YYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKit.h; sourceTree = "<group>"; };
+		6FA6AE9923C4193C00189923 /* microphone_mask.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = microphone_mask.jpg; path = ../../../../../../../../../../../../../../../../../Users/gjs/Desktop/microphone_mask.jpg; sourceTree = "<group>"; };
+		6FA6AE9F23C448F700189923 /* ChatDemoController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDemoController3.h; sourceTree = "<group>"; };
+		6FA6AEA023C448F700189923 /* ChatDemoController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDemoController3.m; sourceTree = "<group>"; };
+		6FA6AEA623C44E6400189923 /* start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start.mp3; sourceTree = "<group>"; };
+		6FA6AEA723C44E6400189923 /* stop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = stop.mp3; sourceTree = "<group>"; };
+		6FA6AEAE23C46EA900189923 /* CustomVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomVoiceView.h; sourceTree = "<group>"; };
+		6FA6AEAF23C46EA900189923 /* CustomVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomVoiceView.m; sourceTree = "<group>"; };
+		6FA6AEB023C46EA900189923 /* SSChatKeyBoardInputView3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSChatKeyBoardInputView3.h; sourceTree = "<group>"; };
+		6FA6AEB123C46EA900189923 /* SSChatKeyBoardInputView3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSChatKeyBoardInputView3.m; sourceTree = "<group>"; };
 		6FF2A2FE23C03B7900F06FBC /* ChatDemoController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDemoController2.m; sourceTree = "<group>"; };
 		6FF2A2FF23C03B7900F06FBC /* ChatDemoController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDemoController2.h; sourceTree = "<group>"; };
 		6FF2A30123C06D1B00F06FBC /* SSChatKeyBoardInputView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSChatKeyBoardInputView2.m; sourceTree = "<group>"; };
@@ -935,6 +1004,87 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		6F8EDA7C23C1A79300EEC325 /* voiceDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6F8EDA7D23C1A79300EEC325 /* animations */,
+				6F8EDA8C23C1A79300EEC325 /* controllers */,
+			);
+			path = voiceDemo;
+			sourceTree = "<group>";
+		};
+		6F8EDA7D23C1A79300EEC325 /* animations */ = {
+			isa = PBXGroup;
+			children = (
+				6F8EDA7E23C1A79300EEC325 /* voiceWave */,
+			);
+			path = animations;
+			sourceTree = "<group>";
+		};
+		6F8EDA7E23C1A79300EEC325 /* voiceWave */ = {
+			isa = PBXGroup;
+			children = (
+				6F8EDAA423C1E2DD00EEC325 /* CustomVoiceVaveView */,
+				6F8EDA7F23C1A79300EEC325 /* circleBackground.png */,
+				6F8EDA8023C1A79300EEC325 /* fill.png */,
+				6F8EDA8123C1A79300EEC325 /* firstLine.png */,
+				6F8EDA8223C1A79300EEC325 /* maskImage.png */,
+				6F8EDA8323C1A79300EEC325 /* secondLine.png */,
+				6F8EDA8423C1A79300EEC325 /* YSCNewVoiceWaveView.h */,
+				6F8EDA8523C1A79300EEC325 /* YSCNewVoiceWaveView.m */,
+				6F8EDA8623C1A79300EEC325 /* YSCVoiceLoadingCircleView.h */,
+				6F8EDA8723C1A79300EEC325 /* YSCVoiceLoadingCircleView.m */,
+				6F8EDA8823C1A79300EEC325 /* YSCVoiceWaveView.h */,
+				6F8EDA8923C1A79300EEC325 /* YSCVoiceWaveView.m */,
+				6F8EDA8A23C1A79300EEC325 /* YSCVolumeQueue.h */,
+				6F8EDA8B23C1A79300EEC325 /* YSCVolumeQueue.m */,
+			);
+			path = voiceWave;
+			sourceTree = "<group>";
+		};
+		6F8EDA8C23C1A79300EEC325 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6F8EDA8D23C1A79300EEC325 /* voice wave */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		6F8EDA8D23C1A79300EEC325 /* voice wave */ = {
+			isa = PBXGroup;
+			children = (
+				6F8EDA8E23C1A79300EEC325 /* YSCVoiceWaveViewController.h */,
+				6F8EDA8F23C1A79300EEC325 /* YSCVoiceWaveViewController.m */,
+			);
+			path = "voice wave";
+			sourceTree = "<group>";
+		};
+		6F8EDAA423C1E2DD00EEC325 /* CustomVoiceVaveView */ = {
+			isa = PBXGroup;
+			children = (
+				6F8EDAA523C1E2DD00EEC325 /* CustomVoiceSleepingView.h */,
+				6F8EDAA623C1E2DD00EEC325 /* CustomVoiceSleepingView.m */,
+				6F3685A123C2D9A400EF17F9 /* CustomVoiceLoadingView.h */,
+				6F3685A223C2D9A400EF17F9 /* CustomVoiceLoadingView.m */,
+				6F8EDAA723C1E2DE00EEC325 /* CustomVoiceWaveView.h */,
+				6F8EDAA823C1E2DE00EEC325 /* CustomVoiceWaveView.m */,
+				6F8EDAA923C1E2DE00EEC325 /* microphone.png */,
+				6F8EDAAA23C1E2DE00EEC325 /* microphone@2x.png */,
+				6F8EDAAB23C1E2DE00EEC325 /* microphone@3x.png */,
+				6F3685A423C2F29800EF17F9 /* microphone_background.jpg */,
+				6FA6AE9923C4193C00189923 /* microphone_mask.jpg */,
+				6F8EDAB523C1E36900EEC325 /* voice_circle_mask.png */,
+				6F8EDAB223C1E36700EEC325 /* voice_circle_mask@2x.png */,
+				6F8EDAB323C1E36700EEC325 /* voice_circle_mask@3x.png */,
+				6F8EDAB623C1E36900EEC325 /* voice_circle.png */,
+				6F8EDAB423C1E36800EEC325 /* voice_circle@2x.png */,
+				6F8EDAB123C1E36600EEC325 /* voice_circle@3x.png */,
+				6FA6AEA623C44E6400189923 /* start.mp3 */,
+				6FA6AEA723C44E6400189923 /* stop.mp3 */,
+			);
+			path = CustomVoiceVaveView;
+			sourceTree = "<group>";
+		};
 		6F99BE5023BDDF630032B6CC /* chatDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -945,6 +1095,9 @@
 				6F99BF2023BDDF650032B6CC /* ChatDemoController.m */,
 				6FF2A2FF23C03B7900F06FBC /* ChatDemoController2.h */,
 				6FF2A2FE23C03B7900F06FBC /* ChatDemoController2.m */,
+				6FA6AE9F23C448F700189923 /* ChatDemoController3.h */,
+				6FA6AEA023C448F700189923 /* ChatDemoController3.m */,
+				6FA6AEAD23C46EA900189923 /* Custom */,
 			);
 			path = chatDemo;
 			sourceTree = "<group>";
@@ -1604,6 +1757,17 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		6FA6AEAD23C46EA900189923 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				6FA6AEAE23C46EA900189923 /* CustomVoiceView.h */,
+				6FA6AEAF23C46EA900189923 /* CustomVoiceView.m */,
+				6FA6AEB023C46EA900189923 /* SSChatKeyBoardInputView3.h */,
+				6FA6AEB123C46EA900189923 /* SSChatKeyBoardInputView3.m */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		7177C5F320F114A5008EF8EC /* tts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1750,6 +1914,7 @@
 			isa = PBXGroup;
 			children = (
 				6F99C05723BDEBD80032B6CC /* YYKit */,
+				6F8EDA7C23C1A79300EEC325 /* voiceDemo */,
 				6F99BE5023BDDF630032B6CC /* chatDemo */,
 				BF8481321EF3BCE5000C8A2C /* resource */,
 				845FA0441AFC5521008447CE /* demo */,
@@ -1858,22 +2023,29 @@
 				6F99BF4D23BDDF650032B6CC /* Expression_26@2x.png in Resources */,
 				AD8FF4A61BCCF2A000D276DD /* Images.xcassets in Resources */,
 				6F99BF3223BDDF650032B6CC /* Emoji.plist in Resources */,
+				6FA6AEA923C44E6500189923 /* stop.mp3 in Resources */,
 				6F99BF9623BDDF650032B6CC /* Expression_92@2x.png in Resources */,
 				6F99BF5923BDDF650032B6CC /* Expression_37@2x.png in Resources */,
 				6F99BF4923BDDF650032B6CC /* Expression_22@2x.png in Resources */,
 				6F99BF5323BDDF650032B6CC /* Expression_31@2x.png in Resources */,
 				6F99BF8723BDDF650032B6CC /* Expression_79@2x.png in Resources */,
+				6F8EDAB823C1E36900EEC325 /* voice_circle_mask@2x.png in Resources */,
 				6F99BF3D23BDDF650032B6CC /* Expression_11@2x.png in Resources */,
 				6F99BF9823BDDF650032B6CC /* Expression_94@2x.png in Resources */,
+				6F8EDAB023C1E2DE00EEC325 /* microphone@3x.png in Resources */,
+				6F8EDA9023C1A79300EEC325 /* circleBackground.png in Resources */,
 				6F99BFA923BDDF650032B6CC /* liaotian_ic_gengduo_nor@2x.png in Resources */,
 				6F99BF7723BDDF650032B6CC /* Expression_64@2x.png in Resources */,
 				6F99BF7D23BDDF650032B6CC /* Expression_6@2x.png in Resources */,
+				6F8EDA9323C1A79400EEC325 /* maskImage.png in Resources */,
+				6F8EDA9223C1A79400EEC325 /* firstLine.png in Resources */,
 				6F99BF5B23BDDF650032B6CC /* Expression_39@2x.png in Resources */,
 				6F99BF8323BDDF650032B6CC /* Expression_75@2x.png in Resources */,
 				6F99BF7523BDDF650032B6CC /* Expression_62@2x.png in Resources */,
 				6F99BF8423BDDF650032B6CC /* Expression_76@2x.png in Resources */,
 				6F99BF3723BDDF650032B6CC /* Expression_101@2x.png in Resources */,
 				6F99BF8F23BDDF650032B6CC /* Expression_86@2x.png in Resources */,
+				6F8EDAAE23C1E2DE00EEC325 /* microphone.png in Resources */,
 				6F99BF7423BDDF650032B6CC /* Expression_61@2x.png in Resources */,
 				6F99BFB323BDDF650032B6CC /* liaotian_ic_jianpan_press@3x.png in Resources */,
 				6F99BFAD23BDDF650032B6CC /* liaotian_ic_gengduo_press@3x.png in Resources */,
@@ -1886,7 +2058,9 @@
 				6F99BFA523BDDF650032B6CC /* liaotian_ic_biaoqing_press.png in Resources */,
 				6F99BFA123BDDF650032B6CC /* img_defaulthead_nor@3x.png in Resources */,
 				6F99BFAB23BDDF650032B6CC /* liaotian_ic_gengduo_press.png in Resources */,
+				6F8EDABC23C1E36900EEC325 /* voice_circle.png in Resources */,
 				6F99BFA323BDDF650032B6CC /* liaotian_ic_biaoqing_nor@2x.png in Resources */,
+				6F8EDA9123C1A79400EEC325 /* fill.png in Resources */,
 				6F99BF7E23BDDF650032B6CC /* Expression_70@2x.png in Resources */,
 				6F99BF7B23BDDF650032B6CC /* Expression_68@2x.png in Resources */,
 				6F99BF7F23BDDF650032B6CC /* Expression_71@2x.png in Resources */,
@@ -1904,12 +2078,14 @@
 				6F99BF4023BDDF650032B6CC /* Expression_14@2x.png in Resources */,
 				6F99BFAE23BDDF650032B6CC /* liaotian_ic_jianpan_nor.png in Resources */,
 				6F99BFB723BDDF650032B6CC /* liaotian_ic_yuyin_nor.png in Resources */,
+				6F3685A523C2F29800EF17F9 /* microphone_background.jpg in Resources */,
 				6F99BF9D23BDDF650032B6CC /* Expression_99@2x.png in Resources */,
 				6F99BF5723BDDF650032B6CC /* Expression_35@2x.png in Resources */,
 				6F99BF6F23BDDF650032B6CC /* Expression_57@2x.png in Resources */,
 				6F99BF3E23BDDF650032B6CC /* Expression_12@2x.png in Resources */,
 				6F99BF6723BDDF650032B6CC /* Expression_4@2x.png in Resources */,
 				6F99BF5C23BDDF650032B6CC /* Expression_3@2x.png in Resources */,
+				6F8EDAB723C1E36900EEC325 /* voice_circle@3x.png in Resources */,
 				6F99BF5D23BDDF650032B6CC /* Expression_40@2x.png in Resources */,
 				6F99BF5423BDDF650032B6CC /* Expression_32@2x.png in Resources */,
 				6F99BF7323BDDF650032B6CC /* Expression_60@2x.png in Resources */,
@@ -1929,11 +2105,14 @@
 				6F99BFA223BDDF650032B6CC /* liaotian_ic_biaoqing_nor.png in Resources */,
 				6F99BF7923BDDF650032B6CC /* Expression_66@2x.png in Resources */,
 				6F99BF3C23BDDF650032B6CC /* Expression_10@2x.png in Resources */,
+				6F8EDABA23C1E36900EEC325 /* voice_circle@2x.png in Resources */,
 				BF8481371EF3BCE5000C8A2C /* meta_vad_16k.jet in Resources */,
 				6F99BF7223BDDF650032B6CC /* Expression_5@2x.png in Resources */,
+				6F8EDAAF23C1E2DE00EEC325 /* microphone@2x.png in Resources */,
 				6F99BF9523BDDF650032B6CC /* Expression_91@2x.png in Resources */,
 				6F99BF3523BDDF650032B6CC /* emotion_icons.plist in Resources */,
 				E9706F41175F383E003B76FC /* InfoPlist.strings in Resources */,
+				6F8EDABB23C1E36900EEC325 /* voice_circle_mask.png in Resources */,
 				6F99BF8223BDDF650032B6CC /* Expression_74@2x.png in Resources */,
 				6F99BF3F23BDDF650032B6CC /* Expression_13@2x.png in Resources */,
 				6F99BF6523BDDF650032B6CC /* Expression_48@2x.png in Resources */,
@@ -1947,18 +2126,22 @@
 				6F99BF9423BDDF650032B6CC /* Expression_90@2x.png in Resources */,
 				6F99BF6C23BDDF650032B6CC /* Expression_54@2x.png in Resources */,
 				6F99BF9B23BDDF650032B6CC /* Expression_97@2x.png in Resources */,
+				6F8EDAB923C1E36900EEC325 /* voice_circle_mask@3x.png in Resources */,
 				6F99BF9723BDDF650032B6CC /* Expression_93@2x.png in Resources */,
 				6F99BFB223BDDF650032B6CC /* liaotian_ic_jianpan_press@2x.png in Resources */,
 				6F99BF4623BDDF650032B6CC /* Expression_1@2x.png in Resources */,
 				6F99BF8A23BDDF650032B6CC /* Expression_81@2x.png in Resources */,
 				6F99BF3423BDDF650032B6CC /* DeleteEmoticonBtnHL@2x.png in Resources */,
 				6F99BF7A23BDDF650032B6CC /* Expression_67@2x.png in Resources */,
+				6FA6AEA823C44E6500189923 /* start.mp3 in Resources */,
+				6FA6AE9A23C4193C00189923 /* microphone_mask.jpg in Resources */,
 				6F99BF6B23BDDF650032B6CC /* Expression_53@2x.png in Resources */,
 				6F99BFA423BDDF650032B6CC /* liaotian_ic_biaoqing_nor@3x.png in Resources */,
 				6F99BF4123BDDF650032B6CC /* Expression_15@2x.png in Resources */,
 				6F99BF6023BDDF650032B6CC /* Expression_43@2x.png in Resources */,
 				6F99BFB823BDDF650032B6CC /* liaotian_ic_yuyin_nor@2x.png in Resources */,
 				6F99BF7823BDDF650032B6CC /* Expression_65@2x.png in Resources */,
+				6F8EDA9423C1A79400EEC325 /* secondLine.png in Resources */,
 				6F99BF8923BDDF650032B6CC /* Expression_80@2x.png in Resources */,
 				6F99BFAA23BDDF650032B6CC /* liaotian_ic_gengduo_nor@3x.png in Resources */,
 				6F99BF6E23BDDF650032B6CC /* Expression_56@2x.png in Resources */,
@@ -2003,12 +2186,14 @@
 				6F99C04423BDE2AB0032B6CC /* SSAddImgView.m in Sources */,
 				6F99C14323BDEBDA0032B6CC /* NSParagraphStyle+YYText.m in Sources */,
 				6F99C04F23BDE2AB0032B6CC /* SSRequestStatus.m in Sources */,
+				6F8EDAAC23C1E2DE00EEC325 /* CustomVoiceSleepingView.m in Sources */,
 				6F99BFC923BDDF650032B6CC /* ChatDemoController.m in Sources */,
 				6F99C05323BDE2AB0032B6CC /* SSTableSwitchView.m in Sources */,
 				6F99BFC023BDDF650032B6CC /* SSChatKeyBordSymbolView.m in Sources */,
 				6F1EAFB023BECA5D005BE8B8 /* SSContactManager.m in Sources */,
 				6F99C12423BDEBDA0032B6CC /* UITextField+YYAdd.m in Sources */,
 				6F99C11823BDEBD90032B6CC /* UIApplication+YYAdd.m in Sources */,
+				6FA6AEB323C46EA900189923 /* SSChatKeyBoardInputView3.m in Sources */,
 				6F99C11123BDEBD90032B6CC /* NSObject+YYAddForARC.m in Sources */,
 				6F99C14223BDEBDA0032B6CC /* NSAttributedString+YYText.m in Sources */,
 				6F99C15423BDEBDA0032B6CC /* YYThreadSafeArray.m in Sources */,
@@ -2043,6 +2228,7 @@
 				6F99C04C23BDE2AB0032B6CC /* SSImageAnimationView.m in Sources */,
 				6F99C12323BDEBDA0032B6CC /* UITableView+YYAdd.m in Sources */,
 				52D282371AEB652B00D4AD4B /* SAMultisectorControl.m in Sources */,
+				6F8EDA9723C1A79400EEC325 /* YSCVoiceWaveView.m in Sources */,
 				6F99C04E23BDE2AB0032B6CC /* SSRequestLoadingStatus.m in Sources */,
 				6F99C02F23BDE2AB0032B6CC /* NSTimer+SSAdd.m in Sources */,
 				6F99C03623BDE2AB0032B6CC /* UIView+SSAdd.m in Sources */,
@@ -2051,7 +2237,9 @@
 				6F99C13823BDEBDA0032B6CC /* YYClassInfo.m in Sources */,
 				6F99C12B23BDEBDA0032B6CC /* CALayer+YYWebImage.m in Sources */,
 				6F99C10923BDEBD90032B6CC /* NSBundle+YYAdd.m in Sources */,
+				6F8EDA9923C1A79400EEC325 /* YSCVoiceWaveViewController.m in Sources */,
 				6F99C03723BDE2AB0032B6CC /* BaseCollectionViewController.m in Sources */,
+				6F8EDA9823C1A79400EEC325 /* YSCVolumeQueue.m in Sources */,
 				6F1EAFB123BECA5D005BE8B8 /* SSDeviceManager.m in Sources */,
 				6F99C10A23BDEBD90032B6CC /* NSData+YYAdd.m in Sources */,
 				6F99BF2523BDDF650032B6CC /* SSChatTime.m in Sources */,
@@ -2094,6 +2282,7 @@
 				AD7774721FCBE92700A63230 /* PopupView.m in Sources */,
 				6F99BFBE23BDDF650032B6CC /* SSChatKeyBoardInputView.m in Sources */,
 				6F99C03B23BDE2AB0032B6CC /* BaseTableViewController.m in Sources */,
+				6F8EDA9623C1A79400EEC325 /* YSCVoiceLoadingCircleView.m in Sources */,
 				6F99C14C23BDEBDA0032B6CC /* YYTextView.m in Sources */,
 				6F99C12923BDEBDA0032B6CC /* YYMemoryCache.m in Sources */,
 				6F99C14B23BDEBDA0032B6CC /* YYLabel.m in Sources */,
@@ -2111,6 +2300,7 @@
 				6FF2A30C23C0919B00F06FBC /* SSChatKeyBordVoiceView.m in Sources */,
 				6F99C10823BDEBD90032B6CC /* NSArray+YYAdd.m in Sources */,
 				6F99C11A23BDEBD90032B6CC /* UIBezierPath+YYAdd.m in Sources */,
+				6FA6AEA123C448F800189923 /* ChatDemoController3.m in Sources */,
 				6F99C12623BDEBDA0032B6CC /* YYCache.m in Sources */,
 				6F99BFC123BDDF650032B6CC /* SSChatKeyBordView.m in Sources */,
 				6F99C04223BDE2AB0032B6CC /* SSActionTableView.m in Sources */,
@@ -2122,17 +2312,20 @@
 				6F1EAFAF23BECA5D005BE8B8 /* SSAccountManager.m in Sources */,
 				6F1EAFBD23BECC5B005BE8B8 /* SSUser.m in Sources */,
 				6F99C14623BDEBDA0032B6CC /* YYTextAttribute.m in Sources */,
+				6FA6AEB223C46EA900189923 /* CustomVoiceView.m in Sources */,
 				6F99C12823BDEBDA0032B6CC /* YYKVStorage.m in Sources */,
 				6FF2A30323C06D1C00F06FBC /* SSChatKeyBoardInputView2.m in Sources */,
 				6F99C11C23BDEBD90032B6CC /* UIControl+YYAdd.m in Sources */,
 				6F99C11023BDEBD90032B6CC /* NSObject+YYAdd.m in Sources */,
 				6F99C02E23BDE2AB0032B6CC /* NSString+SSAdd.m in Sources */,
+				6F8EDAAD23C1E2DE00EEC325 /* CustomVoiceWaveView.m in Sources */,
 				6F99C14A23BDEBDA0032B6CC /* YYTextUtilities.m in Sources */,
 				6F99C04323BDE2AB0032B6CC /* SSAddImage.m in Sources */,
 				6F99C03023BDE2AB0032B6CC /* UIButton+SSAdd.m in Sources */,
 				6F99C13E23BDEBDA0032B6CC /* YYTextLayout.m in Sources */,
 				6F99C13023BDEBDA0032B6CC /* YYFrameImage.m in Sources */,
 				6F99C04523BDE2AB0032B6CC /* SSAlert.m in Sources */,
+				6F3685A323C2D9A500EF17F9 /* CustomVoiceLoadingView.m in Sources */,
 				6F99C03823BDE2AB0032B6CC /* SSCollectionReusableView.m in Sources */,
 				6F99C11B23BDEBD90032B6CC /* UIColor+YYAdd.m in Sources */,
 				6F99C12E23BDEBDA0032B6CC /* UIImageView+YYWebImage.m in Sources */,
@@ -2141,6 +2334,7 @@
 				6F99C11323BDEBD90032B6CC /* NSString+YYAdd.m in Sources */,
 				6F99C12723BDEBDA0032B6CC /* YYDiskCache.m in Sources */,
 				6F99C11423BDEBD90032B6CC /* NSThread+YYAdd.m in Sources */,
+				6F8EDA9523C1A79400EEC325 /* YSCNewVoiceWaveView.m in Sources */,
 				6F99C11E23BDEBD90032B6CC /* UIFont+YYAdd.m in Sources */,
 				6F99C13423BDEBDA0032B6CC /* YYSpriteSheetImage.m in Sources */,
 				6F99C15123BDEBDA0032B6CC /* YYKeychain.m in Sources */,

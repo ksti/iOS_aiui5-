@@ -14,6 +14,8 @@
 @implementation SSChatKeyBordCustomView{
 }
 
+- (void)dealloc {
+}
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if(self = [super initWithFrame:frame]){

@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "SSChatKeyBoardInputView.h"
-#import "SSChatKeyBordVoiceView.h"
+#import "CustomVoiceView.h"
 
 #define SSChatBtnCounts 1
 #define SSChatBtnSpaces (SSChatBtnCounts + 2)
 #define SSChatTextWidth2 SCREEN_Width - (SSChatBtnCounts * SSChatBtnSize + SSChatBtnSpaces *  SSChatBtnDistence) //输入框的宽度
 
 
-@interface SSChatKeyBoardInputView2 : UIView<UITextViewDelegate,AVAudioRecorderDelegate,SSChatKeyBordViewDelegate>
+@interface SSChatKeyBoardInputView3 : UIView<UITextViewDelegate,AVAudioRecorderDelegate,SSChatKeyBordViewDelegate>
 
 @property(nonatomic,weak)id<SSChatKeyBoardInputViewDelegate>delegate;
 
@@ -56,7 +56,7 @@
 -(void)SetSSChatKeyBoardInputViewEndEditing;
 
 // 自定义录音视图
-@property(nonatomic, weak, readonly) SSChatKeyBordVoiceView *voiceView;
+@property(nonatomic, strong, readonly) CustomVoiceView *voiceView;
 
 
 @end

@@ -15,4 +15,8 @@
 
 @interface SSChatKeyBordVoiceView : UIView
 
+- (void)invalidate;
+
+- (void)resetStatus;
+
 @end

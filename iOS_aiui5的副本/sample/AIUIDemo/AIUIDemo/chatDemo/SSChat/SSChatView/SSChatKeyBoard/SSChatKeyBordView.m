@@ -12,6 +12,12 @@
 
 @implementation SSChatKeyBordView
 
+- (void)dealloc {
+    _symbolView = nil;
+    _functionView = nil;
+    _customView = nil;
+    _mCoverView = nil;
+}
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if(self = [super initWithFrame:frame]){

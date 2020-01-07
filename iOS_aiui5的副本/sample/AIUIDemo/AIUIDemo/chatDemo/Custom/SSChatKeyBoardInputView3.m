@@ -6,20 +6,20 @@
 //  Copyright © 2018年 soldoros. All rights reserved.
 //
 
-#import "SSChatKeyBoardInputView2.h"
+#import "SSChatKeyBoardInputView3.h"
 #import "SSOtherDefine.h"
 #import "YYKit.h"
 
-@interface SSChatKeyBoardInputView2 ()
+@interface SSChatKeyBoardInputView3 ()
 
 // 自定义录音视图
-@property(nonatomic, weak, readwrite) SSChatKeyBordVoiceView *voiceView;
+@property(nonatomic, strong, readwrite) CustomVoiceView *voiceView;
 
 @end
 
-@implementation SSChatKeyBoardInputView2
+@implementation SSChatKeyBoardInputView3
 {
-    //__weak SSChatKeyBordVoiceView *_voiceView;
+    //__weak CustomVoiceView *_voiceView;
 }
 
 - (void)dealloc {
@@ -96,7 +96,7 @@
         
         _mKeyBordView = [[SSChatKeyBordView alloc]initWithFrame:CGRectMake(0, self.height, SCREEN_Width, SSChatKeyBordHeight)];
         _mKeyBordView.delegate = self;
-        _voiceView = [[SSChatKeyBordVoiceView alloc] initWithFrame:_mKeyBordView.bounds];
+        _voiceView = [[CustomVoiceView alloc] initWithFrame:_mKeyBordView.bounds];
         [_mKeyBordView.customView addSubview:_voiceView];
         [self addSubview:_mKeyBordView];
         

@@ -10,6 +10,7 @@
 #import "PopupView.h"
 #import "ChatDemoController.h"
 #import "ChatDemoController2.h"
+#import "ChatDemoController3.h"
 
 @implementation RootViewController
 
@@ -53,6 +54,11 @@
         }
         if (indexPath.row == 3) {
             ChatDemoController2 *vc = [ChatDemoController2 new];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        if (indexPath.row == 4) {
+            ChatDemoController3 *vc = [ChatDemoController3 new];
             vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
         }
