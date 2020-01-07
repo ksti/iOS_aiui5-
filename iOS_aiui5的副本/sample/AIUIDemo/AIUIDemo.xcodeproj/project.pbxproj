@@ -326,12 +326,12 @@
 		6F99C15623BDEBDA0032B6CC /* YYTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F99C10223BDEBD90032B6CC /* YYTimer.m */; };
 		6F99C15723BDEBDA0032B6CC /* YYTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F99C10423BDEBD90032B6CC /* YYTransaction.m */; };
 		6F99C15823BDEBDA0032B6CC /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F99C10623BDEBD90032B6CC /* YYWeakProxy.m */; };
-		6FA6AE9A23C4193C00189923 /* microphone_mask.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FA6AE9923C4193C00189923 /* microphone_mask.jpg */; };
 		6FA6AEA123C448F800189923 /* ChatDemoController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6AEA023C448F700189923 /* ChatDemoController3.m */; };
 		6FA6AEA823C44E6500189923 /* start.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6FA6AEA623C44E6400189923 /* start.mp3 */; };
 		6FA6AEA923C44E6500189923 /* stop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6FA6AEA723C44E6400189923 /* stop.mp3 */; };
 		6FA6AEB223C46EA900189923 /* CustomVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6AEAF23C46EA900189923 /* CustomVoiceView.m */; };
 		6FA6AEB323C46EA900189923 /* SSChatKeyBoardInputView3.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6AEB123C46EA900189923 /* SSChatKeyBoardInputView3.m */; };
+		6FA6AEB523C4C55C00189923 /* microphone_mask.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FA6AEB423C4C55C00189923 /* microphone_mask.jpg */; };
 		6FF2A30023C03B7900F06FBC /* ChatDemoController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF2A2FE23C03B7900F06FBC /* ChatDemoController2.m */; };
 		6FF2A30323C06D1C00F06FBC /* SSChatKeyBoardInputView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF2A30123C06D1B00F06FBC /* SSChatKeyBoardInputView2.m */; };
 		6FF2A30B23C0919B00F06FBC /* SSChatKeyBordCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF2A30923C0919B00F06FBC /* SSChatKeyBordCustomView.m */; };
@@ -861,7 +861,6 @@
 		6F99C10523BDEBD90032B6CC /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
 		6F99C10623BDEBD90032B6CC /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
 		6F99C10723BDEBD90032B6CC /* YYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKit.h; sourceTree = "<group>"; };
-		6FA6AE9923C4193C00189923 /* microphone_mask.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = microphone_mask.jpg; path = ../../../../../../../../../../../../../../../../../Users/gjs/Desktop/microphone_mask.jpg; sourceTree = "<group>"; };
 		6FA6AE9F23C448F700189923 /* ChatDemoController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDemoController3.h; sourceTree = "<group>"; };
 		6FA6AEA023C448F700189923 /* ChatDemoController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDemoController3.m; sourceTree = "<group>"; };
 		6FA6AEA623C44E6400189923 /* start.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = start.mp3; sourceTree = "<group>"; };
@@ -870,6 +869,7 @@
 		6FA6AEAF23C46EA900189923 /* CustomVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomVoiceView.m; sourceTree = "<group>"; };
 		6FA6AEB023C46EA900189923 /* SSChatKeyBoardInputView3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSChatKeyBoardInputView3.h; sourceTree = "<group>"; };
 		6FA6AEB123C46EA900189923 /* SSChatKeyBoardInputView3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSChatKeyBoardInputView3.m; sourceTree = "<group>"; };
+		6FA6AEB423C4C55C00189923 /* microphone_mask.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = microphone_mask.jpg; sourceTree = "<group>"; };
 		6FF2A2FE23C03B7900F06FBC /* ChatDemoController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDemoController2.m; sourceTree = "<group>"; };
 		6FF2A2FF23C03B7900F06FBC /* ChatDemoController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDemoController2.h; sourceTree = "<group>"; };
 		6FF2A30123C06D1B00F06FBC /* SSChatKeyBoardInputView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSChatKeyBoardInputView2.m; sourceTree = "<group>"; };
@@ -1072,7 +1072,7 @@
 				6F8EDAAA23C1E2DE00EEC325 /* microphone@2x.png */,
 				6F8EDAAB23C1E2DE00EEC325 /* microphone@3x.png */,
 				6F3685A423C2F29800EF17F9 /* microphone_background.jpg */,
-				6FA6AE9923C4193C00189923 /* microphone_mask.jpg */,
+				6FA6AEB423C4C55C00189923 /* microphone_mask.jpg */,
 				6F8EDAB523C1E36900EEC325 /* voice_circle_mask.png */,
 				6F8EDAB223C1E36700EEC325 /* voice_circle_mask@2x.png */,
 				6F8EDAB323C1E36700EEC325 /* voice_circle_mask@3x.png */,
@@ -2098,6 +2098,7 @@
 				6F99BF9A23BDDF650032B6CC /* Expression_96@2x.png in Resources */,
 				6F99BF3A23BDDF650032B6CC /* Expression_104@2x.png in Resources */,
 				6F99BF9323BDDF650032B6CC /* Expression_8@2x.png in Resources */,
+				6FA6AEB523C4C55C00189923 /* microphone_mask.jpg in Resources */,
 				6F99BF5A23BDDF650032B6CC /* Expression_38@2x.png in Resources */,
 				6F99BF6A23BDDF650032B6CC /* Expression_52@2x.png in Resources */,
 				6F99BF8B23BDDF650032B6CC /* Expression_82@2x.png in Resources */,
@@ -2134,7 +2135,6 @@
 				6F99BF3423BDDF650032B6CC /* DeleteEmoticonBtnHL@2x.png in Resources */,
 				6F99BF7A23BDDF650032B6CC /* Expression_67@2x.png in Resources */,
 				6FA6AEA823C44E6500189923 /* start.mp3 in Resources */,
-				6FA6AE9A23C4193C00189923 /* microphone_mask.jpg in Resources */,
 				6F99BF6B23BDDF650032B6CC /* Expression_53@2x.png in Resources */,
 				6F99BFA423BDDF650032B6CC /* liaotian_ic_biaoqing_nor@3x.png in Resources */,
 				6F99BF4123BDDF650032B6CC /* Expression_15@2x.png in Resources */,

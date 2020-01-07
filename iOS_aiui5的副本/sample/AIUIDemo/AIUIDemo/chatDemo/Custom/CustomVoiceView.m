@@ -969,7 +969,9 @@
         case EVENT_RESULT:
         {
             NSLog(@"EVENT_RESULT");
-            [self updateStatus:0]; // 识别中状态 --> 休眠状态
+            if (_status % 3 == 2) { // 当前状态如果是识别中状态
+                [self updateStatus:0]; // 识别中状态 --> 休眠状态
+            }
             [self processResult:event];
         } break;
             
