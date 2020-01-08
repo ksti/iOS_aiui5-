@@ -33,4 +33,15 @@
 // 地理位置请求对象
 @property (nonatomic, strong) IFlyAIUILocationRequest* mLocationRequest;
 
+// AIUI
+@property (nonatomic, strong, readonly) NSString *nlpResultText;
+@property (nonatomic, strong, readonly) NSString *iatResultText;
+@property (nonatomic, strong, readonly) NSString *commandResultText;
+
+@property (nonatomic, strong, readonly) NSString *nlpAnswerText;
+@property (nonatomic, strong, readonly) NSString *iatAnswerText;
+
+@property (nonatomic, copy, nullable) void (^onNlpAnswerText)(NSString * _Nonnull answer);
+@property (nonatomic, copy, nullable) void (^onIatAnswerText)(NSString * _Nonnull answer);
+
 @end

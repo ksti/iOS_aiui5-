@@ -38,6 +38,8 @@
 
 //当前最后一个“我”发的消息
 @property(nonatomic,strong)SSChatMessage *currentMessageFromMe;
+//当前最后一个消息
+@property(nonatomic,strong)SSChatMessage *latestMessage;
 
 @end
 
@@ -83,12 +85,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"~Title2~";
+    self.navigationItem.title = @"~Title3~";
     self.view.backgroundColor = [UIColor whiteColor];
     
     _mInputView = [SSChatKeyBoardInputView3 new];
     _mInputView.delegate = self;
     [self.view addSubview:_mInputView];
+    
+    __weak typeof(self) weakSelf = self;
+    _mInputView.voiceView.onNlpAnswerText = ^(NSString * _Nonnull answer) {
+        SSChatMessage *message = [weakSelf.chatData generateTextMessageFromId:kFromId text:answer];
+        [weakSelf sendMessage:message];
+    };
+    _mInputView.voiceView.onIatAnswerText = ^(NSString * _Nonnull answer) {
+        if (weakSelf.latestMessage != weakSelf.currentMessageFromMe || weakSelf.currentMessageFromMe == nil) {
+            weakSelf.currentMessageFromMe = [weakSelf.chatData generateTextMessageFromId:kCurrentId text:answer];
+        } else {
+            weakSelf.currentMessageFromMe.textString = answer;
+        }
+        [weakSelf sendContinuousMessage:weakSelf.currentMessageFromMe];
+    };
     
     _backViewH = SCREEN_Height-SSChatKeyBoardInputViewH-SafeAreaTop_Height-SafeAreaBottom_Height;
     
@@ -119,7 +135,7 @@
 
 
 -(void)addNewMesseage:(SSChatMessage *)message animation:(BOOL)animation{
-    
+    self.latestMessage = message;
     [self willSendMessage:message];
 }
 
@@ -207,11 +223,11 @@
 //发送消息
 -(void)sendMessage:(SSChatMessage *)message{
     [self addNewMesseage:message animation:NO];
-    // 测试代码
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        //
-        [self addNewMesseage:[self.chatData generateTextMessageFromId:kFromId text:@"测试回复"] animation:YES];
-    });
+//    // 测试代码
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        //
+//        [self addNewMesseage:[self.chatData generateTextMessageFromId:kFromId text:@"测试回复"] animation:YES];
+//    });
 }
 
 //发送消息
@@ -219,9 +235,8 @@
     if (message.messageFrom == SSChatMessageFromMe) {
         if (self.currentMessageFromMe == message) {
             [self updateCurrentMessage:self.currentMessageFromMe];
-            return;
+            if (self.latestMessage == self.currentMessageFromMe) return;
         }
-        self.currentMessageFromMe = message;
     }
     [self addNewMesseage:message animation:NO];
 }
@@ -234,7 +249,9 @@
         NSString *messageId = layout.chatMessage.messageId;
         
         if([messageId isEqualToString:message.messageId]){
-            [self.datas replaceObjectAtIndex:i withObject:layout];
+            // 创建 layout 用 [self.chatData getLayoutWithMessage:message]
+            SSChatMessagelLayout *newLayout = [self.chatData getLayoutWithMessage:message];
+            [self.datas replaceObjectAtIndex:i withObject:newLayout];
             break;
         }
     }

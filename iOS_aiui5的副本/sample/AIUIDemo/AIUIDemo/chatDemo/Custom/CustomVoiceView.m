@@ -19,6 +19,7 @@
 
 #define PQ_RADIANS(number)  ((M_PI * number)/ 180)
 #define kRadius 25
+#define kDefaultText @"weather"
 
 @interface CustomVoiceView ()
 
@@ -42,7 +43,12 @@
 @property (nonatomic, strong) AVPlayer *voicePlayer;
 
 // AIUI
-@property (nonatomic, strong) NSString *resultText;
+@property (nonatomic, strong, readwrite) NSString *nlpResultText;
+@property (nonatomic, strong, readwrite) NSString *iatResultText;
+@property (nonatomic, strong, readwrite) NSString *commandResultText;
+
+@property (nonatomic, strong, readwrite) NSString *nlpAnswerText;
+@property (nonatomic, strong, readwrite) NSString *iatAnswerText;
 
 @end
 
@@ -117,7 +123,7 @@
     
     _autoTTS = true;
     
-    self.resultText = NSLocalizedString(@"weather", nil);
+    self.nlpResultText = NSLocalizedString(kDefaultText, nil);
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillResignActive:)
                                                  name:UIApplicationWillResignActiveNotification object:nil];
@@ -128,6 +134,32 @@
     [_mLocationRequest locationAsynRequest];
     
     [self onCreateClick:nil];
+}
+
+- (void)setNlpResultText:(NSString *)nlpResultText {
+    NSLog(@"setNlpResultText:%@", nlpResultText);
+    _nlpResultText = nlpResultText;
+}
+
+- (void)setIatResultText:(NSString *)iatResultText {
+    NSLog(@"setIatResultText:%@", iatResultText);
+    _iatResultText = iatResultText;
+}
+
+- (void)setNlpAnswerText:(NSString *)nlpAnswerText {
+    NSLog(@"setNlpAnswerText:%@", nlpAnswerText);
+    _nlpAnswerText = nlpAnswerText;
+    if (self.onNlpAnswerText) {
+        self.onNlpAnswerText(_nlpAnswerText);
+    }
+}
+
+- (void)setIatAnswerText:(NSString *)iatAnswerText {
+    NSLog(@"setIatAnswerText:%@", iatAnswerText);
+    _iatAnswerText = iatAnswerText;
+    if (self.onIatAnswerText) {
+        self.onIatAnswerText(_iatAnswerText);
+    }
 }
 
 // 不知为什么 voiceWaveShowButtonTouched 触发不了，可能是 RunLoop 的问题？
@@ -495,7 +527,7 @@
         return;
     }
     
-    self.resultText = NSLocalizedString(@"weather", nil);
+    self.nlpResultText = NSLocalizedString(kDefaultText, nil);
 
     if (self.aiuiState == STATE_READY) {
         IFlyAIUIMessage *msg = [[IFlyAIUIMessage alloc] init];
@@ -503,7 +535,7 @@
         [_aiuiAgent sendMessage:msg];
     }
     
-    NSData *textData = [self.resultText dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *textData = [self.nlpResultText dataUsingEncoding:NSUTF8StringEncoding];
 
     IFlyAIUIMessage *msg = [[IFlyAIUIMessage alloc] init];
     msg.msgType = CMD_WRITE;
@@ -721,7 +753,8 @@
 
 /* 销毁Agent */
 - (IBAction)onDestroyClick:(id)sender {
-    self.resultText = NSLocalizedString(@"weather", nil);
+    self.nlpResultText = NSLocalizedString(kDefaultText, nil);
+    self.iatResultText = @"";
     
     [self stopRecord];
     [_aiuiAgent destroy];
@@ -730,7 +763,7 @@
 
 - (void)applicationWillResignActive:(NSNotification *)notification
 {
-    self.resultText = NSLocalizedString(@"weather", nil);
+    self.nlpResultText = NSLocalizedString(kDefaultText, nil);
     
     [self stopRecord];
 }
@@ -748,6 +781,7 @@
 - (void)processResult:(IFlyAIUIEvent *)event{
     
     NSString *info = event.info;
+    NSLog(@"info = %@", info);
     NSData *infoData = [info dataUsingEncoding:NSUTF8StringEncoding];
     NSError *err;
     NSDictionary *infoDic = [NSJSONSerialization JSONObjectWithData:infoData options:NSJSONReadingMutableContainers error:&err];
@@ -775,12 +809,14 @@
         if(rltData){
             NSString *rltStr = [[[NSString alloc]initWithData:rltData encoding:NSUTF8StringEncoding] stringByReplacingOccurrencesOfString:@"\0" withString:@""];
             NSLog(@"nlp result: %@", rltStr);
-            if (rltStr.length > 20)
+            if (rltStr.length > 0)
             {
-                self.resultText = rltStr;
+                self.nlpResultText = rltStr;
                 NSData *data = [rltStr dataUsingEncoding:NSUTF8StringEncoding];
                 NSDictionary *rstDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                NSString *answer = rstDic[@"intent"][@"answer"][@"text"];
                 NSLog(@"answer is %@", rstDic[@"intent"][@"answer"][@"text"]);
+                self.nlpAnswerText = answer;
             }
         }
     } else if([sub isEqualToString:@"tts"]){
@@ -798,6 +834,36 @@
             int text_per = [(NSNumber *)[content objectForKey:@"text_percent"] intValue];
             
             NSLog(@"dataLen=%lu, dts=%d, text_percent=%d", (unsigned long)[audioData length], dts, text_per);
+        }
+    } else if([sub isEqualToString:@"iat"]){
+        
+        NSString *cnt_id = [content objectForKey:@"cnt_id"];
+        if(!cnt_id){
+            NSLog(@"Content Id is empty");
+            return;
+        }
+        
+        NSData *rltData = [event.data objectForKey:cnt_id];
+        if(rltData){
+            NSString *rltStr = [[[NSString alloc]initWithData:rltData encoding:NSUTF8StringEncoding] stringByReplacingOccurrencesOfString:@"\0" withString:@""];
+            NSLog(@"iat result: %@", rltStr);
+            if (rltStr.length > 0)
+            {
+                self.iatResultText = rltStr;
+                NSData *data = [rltStr dataUsingEncoding:NSUTF8StringEncoding];
+                NSDictionary *rstDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                NSLog(@"iat result dict: %@", rstDic);
+                NSArray *words = rstDic[@"text"][@"ws"];
+                NSString *answer = @"";
+                for (NSDictionary *dict in words) {
+                    NSArray *cw = dict[@"cw"];
+                    for (NSDictionary *w in cw) {
+                        NSString *word = w[@"w"];
+                        answer = [answer stringByAppendingString:word];
+                    }
+                }
+                self.iatAnswerText = answer;
+            }
         }
     }
 }
@@ -837,7 +903,7 @@
                 
                 if (0 == retcode)
                 {
-                    self.resultText = NSLocalizedString(@"syncSuccess", nil);
+                    self.commandResultText = NSLocalizedString(@"syncSuccess", nil);
                     
                 }
                 else
@@ -874,7 +940,7 @@
         {
             NSString *rltInfo = [event.data objectForKey:@"result"];
             
-            self.resultText = rltInfo;
+            self.commandResultText = rltInfo;
         }
     }
 }
