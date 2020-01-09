@@ -28,6 +28,8 @@
 		6F1EAFDB23BEE8AB005BE8B8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1EAFDA23BEE8AB005BE8B8 /* Security.framework */; };
 		6F1EAFDD23BEE8E5005BE8B8 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1EAFDC23BEE8E5005BE8B8 /* libsqlite3.0.tbd */; };
 		6F1EAFDE23BEE911005BE8B8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AD045F581BB0EFB6004E3799 /* libz.tbd */; };
+		6F30ADD723C723C700FBFFDE /* icon_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F30ADD523C723C700FBFFDE /* icon_close@2x.png */; };
+		6F30ADD823C723C700FBFFDE /* icon_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F30ADD623C723C700FBFFDE /* icon_close@3x.png */; };
 		6F3685A323C2D9A500EF17F9 /* CustomVoiceLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3685A223C2D9A400EF17F9 /* CustomVoiceLoadingView.m */; };
 		6F3685A523C2F29800EF17F9 /* microphone_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F3685A423C2F29800EF17F9 /* microphone_background.jpg */; };
 		6F8EDA9023C1A79300EEC325 /* circleBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F8EDA7F23C1A79300EEC325 /* circleBackground.png */; };
@@ -332,6 +334,10 @@
 		6FA6AEB223C46EA900189923 /* CustomVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6AEAF23C46EA900189923 /* CustomVoiceView.m */; };
 		6FA6AEB323C46EA900189923 /* SSChatKeyBoardInputView3.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6AEB123C46EA900189923 /* SSChatKeyBoardInputView3.m */; };
 		6FA6AEB523C4C55C00189923 /* microphone_mask.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6FA6AEB423C4C55C00189923 /* microphone_mask.jpg */; };
+		6FBA3B1923C5CF990068DD40 /* icon_keyboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FBA3B1723C5CF990068DD40 /* icon_keyboard@2x.png */; };
+		6FBA3B1A23C5CF990068DD40 /* icon_keyboard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FBA3B1823C5CF990068DD40 /* icon_keyboard@3x.png */; };
+		6FBA3B1D23C5CFEA0068DD40 /* icon_voice@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FBA3B1B23C5CFEA0068DD40 /* icon_voice@3x.png */; };
+		6FBA3B1E23C5CFEA0068DD40 /* icon_voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FBA3B1C23C5CFEA0068DD40 /* icon_voice@2x.png */; };
 		6FF2A30023C03B7900F06FBC /* ChatDemoController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF2A2FE23C03B7900F06FBC /* ChatDemoController2.m */; };
 		6FF2A30323C06D1C00F06FBC /* SSChatKeyBoardInputView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF2A30123C06D1B00F06FBC /* SSChatKeyBoardInputView2.m */; };
 		6FF2A30B23C0919B00F06FBC /* SSChatKeyBordCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF2A30923C0919B00F06FBC /* SSChatKeyBordCustomView.m */; };
@@ -409,6 +415,8 @@
 		6F1EAFD823BEE849005BE8B8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		6F1EAFDA23BEE8AB005BE8B8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6F1EAFDC23BEE8E5005BE8B8 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		6F30ADD523C723C700FBFFDE /* icon_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_close@2x.png"; sourceTree = "<group>"; };
+		6F30ADD623C723C700FBFFDE /* icon_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_close@3x.png"; sourceTree = "<group>"; };
 		6F3685A123C2D9A400EF17F9 /* CustomVoiceLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomVoiceLoadingView.h; sourceTree = "<group>"; };
 		6F3685A223C2D9A400EF17F9 /* CustomVoiceLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomVoiceLoadingView.m; sourceTree = "<group>"; };
 		6F3685A423C2F29800EF17F9 /* microphone_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = microphone_background.jpg; sourceTree = "<group>"; };
@@ -870,6 +878,10 @@
 		6FA6AEB023C46EA900189923 /* SSChatKeyBoardInputView3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSChatKeyBoardInputView3.h; sourceTree = "<group>"; };
 		6FA6AEB123C46EA900189923 /* SSChatKeyBoardInputView3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSChatKeyBoardInputView3.m; sourceTree = "<group>"; };
 		6FA6AEB423C4C55C00189923 /* microphone_mask.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = microphone_mask.jpg; sourceTree = "<group>"; };
+		6FBA3B1723C5CF990068DD40 /* icon_keyboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_keyboard@2x.png"; sourceTree = "<group>"; };
+		6FBA3B1823C5CF990068DD40 /* icon_keyboard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_keyboard@3x.png"; sourceTree = "<group>"; };
+		6FBA3B1B23C5CFEA0068DD40 /* icon_voice@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_voice@3x.png"; sourceTree = "<group>"; };
+		6FBA3B1C23C5CFEA0068DD40 /* icon_voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_voice@2x.png"; sourceTree = "<group>"; };
 		6FF2A2FE23C03B7900F06FBC /* ChatDemoController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatDemoController2.m; sourceTree = "<group>"; };
 		6FF2A2FF23C03B7900F06FBC /* ChatDemoController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatDemoController2.h; sourceTree = "<group>"; };
 		6FF2A30123C06D1B00F06FBC /* SSChatKeyBoardInputView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSChatKeyBoardInputView2.m; sourceTree = "<group>"; };
@@ -1764,6 +1776,12 @@
 				6FA6AEAF23C46EA900189923 /* CustomVoiceView.m */,
 				6FA6AEB023C46EA900189923 /* SSChatKeyBoardInputView3.h */,
 				6FA6AEB123C46EA900189923 /* SSChatKeyBoardInputView3.m */,
+				6FBA3B1723C5CF990068DD40 /* icon_keyboard@2x.png */,
+				6FBA3B1823C5CF990068DD40 /* icon_keyboard@3x.png */,
+				6FBA3B1C23C5CFEA0068DD40 /* icon_voice@2x.png */,
+				6FBA3B1B23C5CFEA0068DD40 /* icon_voice@3x.png */,
+				6F30ADD523C723C700FBFFDE /* icon_close@2x.png */,
+				6F30ADD623C723C700FBFFDE /* icon_close@3x.png */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -2025,6 +2043,7 @@
 				6F99BF3223BDDF650032B6CC /* Emoji.plist in Resources */,
 				6FA6AEA923C44E6500189923 /* stop.mp3 in Resources */,
 				6F99BF9623BDDF650032B6CC /* Expression_92@2x.png in Resources */,
+				6F30ADD723C723C700FBFFDE /* icon_close@2x.png in Resources */,
 				6F99BF5923BDDF650032B6CC /* Expression_37@2x.png in Resources */,
 				6F99BF4923BDDF650032B6CC /* Expression_22@2x.png in Resources */,
 				6F99BF5323BDDF650032B6CC /* Expression_31@2x.png in Resources */,
@@ -2069,10 +2088,12 @@
 				6F99BFA723BDDF650032B6CC /* liaotian_ic_biaoqing_press@3x.png in Resources */,
 				6F99BF9223BDDF650032B6CC /* Expression_89@2x.png in Resources */,
 				6F99BF6823BDDF650032B6CC /* Expression_50@2x.png in Resources */,
+				6FBA3B1E23C5CFEA0068DD40 /* icon_voice@2x.png in Resources */,
 				6F99BFA023BDDF650032B6CC /* img_defaulthead_nor@2x.png in Resources */,
 				6F99BF6323BDDF650032B6CC /* Expression_46@2x.png in Resources */,
 				6F99BF8823BDDF650032B6CC /* Expression_7@2x.png in Resources */,
 				6F99BF8C23BDDF650032B6CC /* Expression_83@2x.png in Resources */,
+				6FBA3B1923C5CF990068DD40 /* icon_keyboard@2x.png in Resources */,
 				6F99BFA823BDDF650032B6CC /* liaotian_ic_gengduo_nor.png in Resources */,
 				6F99BFB623BDDF650032B6CC /* liaotian_ic_press@3x.png in Resources */,
 				6F99BF4023BDDF650032B6CC /* Expression_14@2x.png in Resources */,
@@ -2085,6 +2106,7 @@
 				6F99BF3E23BDDF650032B6CC /* Expression_12@2x.png in Resources */,
 				6F99BF6723BDDF650032B6CC /* Expression_4@2x.png in Resources */,
 				6F99BF5C23BDDF650032B6CC /* Expression_3@2x.png in Resources */,
+				6F30ADD823C723C700FBFFDE /* icon_close@3x.png in Resources */,
 				6F8EDAB723C1E36900EEC325 /* voice_circle@3x.png in Resources */,
 				6F99BF5D23BDDF650032B6CC /* Expression_40@2x.png in Resources */,
 				6F99BF5423BDDF650032B6CC /* Expression_32@2x.png in Resources */,
@@ -2109,6 +2131,7 @@
 				6F8EDABA23C1E36900EEC325 /* voice_circle@2x.png in Resources */,
 				BF8481371EF3BCE5000C8A2C /* meta_vad_16k.jet in Resources */,
 				6F99BF7223BDDF650032B6CC /* Expression_5@2x.png in Resources */,
+				6FBA3B1D23C5CFEA0068DD40 /* icon_voice@3x.png in Resources */,
 				6F8EDAAF23C1E2DE00EEC325 /* microphone@2x.png in Resources */,
 				6F99BF9523BDDF650032B6CC /* Expression_91@2x.png in Resources */,
 				6F99BF3523BDDF650032B6CC /* emotion_icons.plist in Resources */,
@@ -2153,6 +2176,7 @@
 				6F99BF3323BDDF650032B6CC /* DeleteEmoticonBtn@2x.png in Resources */,
 				6F99BF3B23BDDF650032B6CC /* Expression_105@2x.png in Resources */,
 				6F99BF4F23BDDF650032B6CC /* Expression_28@2x.png in Resources */,
+				6FBA3B1A23C5CF990068DD40 /* icon_keyboard@3x.png in Resources */,
 				6F99BF5623BDDF650032B6CC /* Expression_34@2x.png in Resources */,
 				6F99BF9123BDDF650032B6CC /* Expression_88@2x.png in Resources */,
 				6F99BF4C23BDDF650032B6CC /* Expression_25@2x.png in Resources */,

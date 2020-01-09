@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "SSChatMessagelLayout.h"
 #import "SSChatViews.h"
+#import "IFlyAIUI/IFlyAIUI.h"
 
-@interface ChatDemoController3 : UIViewController
+@interface ChatDemoController3 : UIViewController<IFlyAIUIListener>
+
+@property IFlyAIUIAgent *aiuiAgent;
 
 @end

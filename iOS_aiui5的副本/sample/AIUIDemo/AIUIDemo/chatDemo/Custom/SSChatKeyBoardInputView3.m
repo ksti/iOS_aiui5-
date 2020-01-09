@@ -96,9 +96,11 @@
         
         _mKeyBordView = [[SSChatKeyBordView alloc]initWithFrame:CGRectMake(0, self.height, SCREEN_Width, SSChatKeyBordHeight)];
         _mKeyBordView.delegate = self;
-        _voiceView = [[CustomVoiceView alloc] initWithFrame:_mKeyBordView.bounds];
-        [_mKeyBordView.customView addSubview:_voiceView];
         [self addSubview:_mKeyBordView];
+        
+        _voiceView = [[CustomVoiceView alloc] initWithFrame:_mKeyBordView.bounds];
+        // 默认 voiceViewInKeyboard = YES; 添加到键盘上面
+        self.voiceViewInKeyboard = YES;
         
         
         //键盘显示 回收的监听
@@ -230,9 +232,40 @@
     }
 }
 
+- (void)setVoiceViewInKeyboard:(BOOL)voiceViewInKeyboard {
+    if (_voiceViewInKeyboard == voiceViewInKeyboard) return;
+    _voiceViewInKeyboard = voiceViewInKeyboard;
+    [_voiceView removeFromSuperview];
+    if (_voiceViewInKeyboard) {
+        [_voiceView removeFromSuperview];
+        _voiceView.frame = _mKeyBordView.bounds;
+        [_mKeyBordView.customView addSubview:_voiceView];
+    }
+}
+
+- (void)showKeyboard:(BOOL)show {
+    [self setHidden:!show];
+    // 模拟触发按钮
+    if (show) {
+        [_voiceView removeFromSuperview];
+        _keyBoardStatus = SSChatKeyBoardStatusVoice;
+        UIButton *button = [UIButton new];
+        button.tag = 10;
+        [self btnPressed:button];
+    }
+}
 
 //语音10  表情11  其他功能12 自定制功能13
 -(void)btnPressed:(UIButton *)sender {
+    
+    if (!self.voiceViewInKeyboard) {
+        if (sender.tag == 13) {
+            [self.mTextView resignFirstResponder];
+            if (self.onDismissKeyboard) {
+                self.onDismissKeyboard();
+            }
+        }
+    }
    
     switch (self.keyBoardStatus) {
             

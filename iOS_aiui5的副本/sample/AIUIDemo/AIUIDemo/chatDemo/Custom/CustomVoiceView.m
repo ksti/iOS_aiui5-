@@ -18,7 +18,7 @@
 #import "YSCNewVoiceWaveView.h"
 
 #define PQ_RADIANS(number)  ((M_PI * number)/ 180)
-#define kRadius 25
+#define kRadius 40
 #define kDefaultText @"weather"
 
 @interface CustomVoiceView ()
@@ -59,6 +59,7 @@
 
 - (void)dealloc {
     [self invalidate];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)invalidate {
@@ -134,6 +135,10 @@
     [_mLocationRequest locationAsynRequest];
     
     [self onCreateClick:nil];
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
 }
 
 - (void)setNlpResultText:(NSString *)nlpResultText {
@@ -255,13 +260,35 @@
     [self updateStatus:0];
 }
 
+- (void)forceResetStatus {
+    _resetStatus = YES;
+    // 停止录音
+    [self stopRecordBtnHandler:nil];
+    // 移除，重新添加
+    self.containerView.frame = self.bounds;
+    self.voiceWaveParentView.frame = self.containerView.bounds;
+    self.voiceWaveParentViewNew.frame = self.containerView.bounds;
+    [self.sleepingView removeFromSuperview];
+    [self.loadingView removeFromSuperview];
+    [self.voiceWaveShowButton removeFromSuperview];
+    [self.voiceIcon removeFromSuperview];
+    self.voiceIcon = nil;
+    self.voiceWaveShowButton = nil;
+    self.loadingView = nil;
+    self.sleepingView = nil;
+    
+    [self.containerView addSubview:self.voiceWaveShowButton];
+    
+    // 更新
+    [self forceUpdateStatus:0];
+}
+
 - (void)voiceWaveShowButtonTouched:(UIButton *)sender
 {
     [self updateStatus:_status+1];
 }
 
-- (void)updateStatus:(NSInteger)status {
-    if (_status % 3 == status % 3) return;
+- (void)forceUpdateStatus:(NSInteger)status {
     if (_status % 3 == 2 && status % 3 == 0) { // 识别中状态 --> 休眠状态
         if (!_resetStatus) {
             [self playVoice:@"stop.mp3"];
@@ -285,6 +312,11 @@
         _status = status;
         [self updateCurrentStatus];
     }
+}
+
+- (void)updateStatus:(NSInteger)status {
+    if (_status % 3 == status % 3) return;
+    [self forceUpdateStatus:status];
 }
 
 - (void)stopAll {
@@ -390,14 +422,15 @@
 - (UIButton *)voiceWaveShowButton
 {
     if (!_voiceWaveShowButton) {
-        _voiceWaveShowButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+        CGFloat buttonHeight = 100;
+        _voiceWaveShowButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, buttonHeight, buttonHeight)];
         _voiceWaveShowButton.userInteractionEnabled = YES;
         _voiceWaveShowButton.center = self.containerView.center;
         [_voiceWaveShowButton addTarget:self action:@selector(voiceWaveShowButtonTouched:) forControlEvents:UIControlEventTouchDown];
         //中间麦克风图
-        UIImageView *imgMicrophone = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 16, 24)];
+        UIImageView *imgMicrophone = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 32, 48)];
         //imgMicrophone.center = CGPointMake(30, 30);
-        imgMicrophone.center = CGPointMake(30, 29); // 不知道为啥偏下了一点。。
+        imgMicrophone.center = CGPointMake(buttonHeight/2, buttonHeight/2-1); // 不知道为啥偏下了一点。。
         imgMicrophone.contentMode = UIViewContentModeCenter;
         imgMicrophone.image = [UIImage imageNamed:@"microphone"];
         //[_voiceWaveShowButton setImage:[UIImage imageNamed:@"microphone"] forState:UIControlStateNormal];

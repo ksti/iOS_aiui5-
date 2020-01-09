@@ -58,6 +58,12 @@
 // 自定义录音视图
 @property(nonatomic, strong, readonly) CustomVoiceView *voiceView;
 
+- (void)showKeyboard:(BOOL)show;
+
+@property(nonatomic,assign)BOOL voiceViewInKeyboard;
+
+@property (nonatomic, copy, nullable) void (^onDismissKeyboard)(void);
+
 
 @end
 

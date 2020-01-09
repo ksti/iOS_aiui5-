@@ -60,7 +60,8 @@
         if (indexPath.row == 4) {
             ChatDemoController3 *vc = [ChatDemoController3 new];
             vc.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:vc animated:YES];
+//            [self.navigationController pushViewController:vc animated:YES];
+            [self presentViewController:vc animated:YES completion:nil];
         }
     }
 }

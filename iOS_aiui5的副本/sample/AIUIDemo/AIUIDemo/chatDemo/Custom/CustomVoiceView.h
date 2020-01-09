@@ -21,6 +21,7 @@
 - (void)invalidate;
 
 - (void)resetStatus;
+- (void)forceResetStatus;
 
 @property IFlyAIUIAgent *aiuiAgent;
 
