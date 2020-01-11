@@ -552,15 +552,13 @@
 #pragma mark - AIUI
 
 
-- (IBAction)onTextBtnHandler:(id)sender
+- (void)sendTextToAIUI:(NSString *)text
 {
     if (_aiuiAgent == nil)
     {
         NSLog(NSLocalizedString(@"agentNull", nil));
         return;
     }
-    
-    self.nlpResultText = NSLocalizedString(kDefaultText, nil);
 
     if (self.aiuiState == STATE_READY) {
         IFlyAIUIMessage *msg = [[IFlyAIUIMessage alloc] init];
@@ -568,7 +566,7 @@
         [_aiuiAgent sendMessage:msg];
     }
     
-    NSData *textData = [self.nlpResultText dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *textData = [text dataUsingEncoding:NSUTF8StringEncoding];
 
     IFlyAIUIMessage *msg = [[IFlyAIUIMessage alloc] init];
     msg.msgType = CMD_WRITE;

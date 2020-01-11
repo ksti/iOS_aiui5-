@@ -45,4 +45,6 @@
 @property (nonatomic, copy, nullable) void (^onNlpAnswerText)(NSString * _Nonnull answer);
 @property (nonatomic, copy, nullable) void (^onIatAnswerText)(NSString * _Nonnull answer);
 
+- (void)sendTextToAIUI:(NSString *_Nonnull)text;
+
 @end

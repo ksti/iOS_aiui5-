@@ -49,6 +49,8 @@
 //当前最后一个消息
 @property(nonatomic,strong)SSChatMessage *latestMessage;
 
+@property(nonatomic,assign)AVAudioSessionCategory audioCategory;
+
 @end
 
 @implementation ChatDemoController3 {
@@ -61,6 +63,7 @@
         _chatData = [SSChatDatas new];        
         _chatData.hiddenHeaderImage = YES;
         _chatData.hiddenMessageBackgroundImage = YES;
+        _audioCategory = [[AVAudioSession sharedInstance] category];
     }
     return self;
 }
@@ -71,7 +74,8 @@
 }
 
 -(void)dealloc{
-    cout(@"释放了控制器");
+    NSLog(@"%@", @"释放了控制器");
+    [[AVAudioSession sharedInstance] setCategory:_audioCategory error:nil];
     [_aiuiAgent destroy];
     _mInputView.delegate = nil;
     _mInputView = nil;
@@ -191,6 +195,7 @@
 }
 
 - (void)setupAIUI {
+    /*
     // 读取aiui.cfg配置文件
     NSString *cfgFilePath = [[NSBundle mainBundle] pathForResource:@"aiui" ofType:@"cfg"];
     NSString *cfg = [NSString stringWithContentsOfFile:cfgFilePath encoding:NSUTF8StringEncoding error:nil];
@@ -201,6 +206,8 @@
     wakeuMsg.msgType = CMD_WAKEUP;
     
     [_aiuiAgent sendMessage:wakeuMsg];
+    */
+    _aiuiAgent = _mInputView.voiceView.aiuiAgent; // 用语音录入的 aiuiAgent
 }
 
 - (void)onCloseButton:(UIButton *)sender {
@@ -345,13 +352,13 @@
 //照片10 视频11 通话12 位置13 文件14 红包15
 //转账16 语音输入17 名片18 活动19
 -(void)SSChatKeyBoardInputViewBtnClickFunction:(NSInteger)index{    
-    cout([NSString stringWithFormat:@"键盘输入非文字消息index: %ld", (long)index]);
+    NSLog(@"%@", [NSString stringWithFormat:@"键盘输入非文字消息index: %ld", (long)index]);
 }
 
 
 //发送文本
 -(void)SSChatKeyBoardInputViewBtnClick:(NSString *)string{
-    
+    [self sendTextToAIUI:string ?: @""];
     SSChatMessage *message = [self.chatData generateTextMessageFromId:kCurrentId text:string];
     message.conversationId = kSessionId;
     [self sendMessage:message];
@@ -360,7 +367,7 @@
 //发送语音
 -(void)SSChatKeyBoardInputViewBtnClick:(SSChatKeyBoardInputView3 *)view voicePath:(NSString *)voicePath time:(int)second{
 
-    cout(voicePath);
+    NSLog(@"%@", voicePath);
     SSChatMessage *message = [self.chatData generateTextMessageFromId:kCurrentId text:@"发来了一段语音"];
     message.conversationId = kSessionId;
     [self sendMessage:message];
@@ -554,6 +561,8 @@
         NSLog(NSLocalizedString(@"agentNull", nil));
         return;
     }
+    //切换为扬声器播放
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     NSData *textData = [text dataUsingEncoding:NSUTF8StringEncoding];
     NSString *params = [NSString stringWithFormat:@"vcn=x_chongchong,engine_type=xtts,speed=50,pitch=50,volume=50"];
     
@@ -609,6 +618,11 @@
                                    selector:@selector(sendWelcome)
                                    userInfo:nil
                                     repeats:false];
+}
+
+- (void)sendTextToAIUI:(NSString *)text {
+    //写入文本
+    [_mInputView.voiceView sendTextToAIUI:text];
 }
 
 #pragma mark - IFlyAIUIListener
