@@ -64,6 +64,8 @@
 
 @property (nonatomic, copy, nullable) void (^onDismissKeyboard)(void);
 
+@property(nonatomic, assign) BOOL isBeingPresented; // 视图控制器是否是模态视图
+
 
 @end
 

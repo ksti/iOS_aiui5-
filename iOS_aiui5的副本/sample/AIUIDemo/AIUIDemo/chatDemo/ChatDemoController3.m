@@ -118,6 +118,7 @@
     }
     
     _mInputView = [SSChatKeyBoardInputView3 new];
+    _mInputView.isBeingPresented = self.isBeingPresented;
     _mInputView.delegate = self;
     [self.view addSubview:_mInputView];
     

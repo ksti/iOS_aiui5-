@@ -29,9 +29,13 @@
 }
 
 -(instancetype)init{
-    if(self = [super init]){
-        self.backgroundColor =  SSChatCellColor;
-        self.frame = CGRectMake(0, SCREEN_Height-SSChatKeyBoardInputViewH-SafeAreaBottom_Height, SCREEN_Width, SSChatKeyBoardInputViewH);
+    CGRect frame = CGRectMake(0, SCREEN_Height-SSChatKeyBoardInputViewH-SafeAreaBottom_Height, SCREEN_Width, SSChatKeyBoardInputViewH);
+    return [self initWithFrame:frame];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if(self = [super initWithFrame:frame]){
+        self.backgroundColor = SSChatCellColor;
         
         _keyBoardStatus = SSChatKeyBoardStatusDefault;
         _keyBoardHieght = 0;
@@ -111,6 +115,9 @@
     return self;
 }
 
+- (void)setIsBeingPresented:(BOOL)isBeingPresented {
+    _isBeingPresented = isBeingPresented;
+}
 
 //开始布局就把底部的表情和多功能放在输入框底部了 这里需要对点击界外事件做处理
 -(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
@@ -187,6 +194,9 @@
         if(height==SafeAreaBottom_Height || height==0) height = _keyBoardHieght;
     }
     
+    if (self.isBeingPresented) {
+        height += (StatuBar_Height + 10);
+    }
     self.keyBoardHieght = height;
 }
 
@@ -248,10 +258,12 @@
     // 模拟触发按钮
     if (show) {
         [_voiceView removeFromSuperview];
-        _keyBoardStatus = SSChatKeyBoardStatusVoice;
-        UIButton *button = [UIButton new];
-        button.tag = 10;
-        [self btnPressed:button];
+        self.keyBoardStatus = SSChatKeyBoardStatusEdit;
+        self.currentBtn.selected = NO;
+        self.mTextView.hidden = NO;
+        _mKeyBordView.mCoverView.hidden = NO;
+        [self.mTextView becomeFirstResponder];
+        [self setNewSizeWithBootm:_textH];
     }
 }
 
