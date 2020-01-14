@@ -54,8 +54,8 @@
         //_mLeftBtn.tag  = 10; // 语音
         _mLeftBtn.tag  = 13; // 模拟Custom
         [self addSubview:_mLeftBtn];
-        [_mLeftBtn setBackgroundImage:[UIImage imageNamed:@"icon_yuying"] forState:UIControlStateNormal];
-        [_mLeftBtn setBackgroundImage:[UIImage imageNamed:@"icon_shuru"] forState:UIControlStateSelected];
+        [_mLeftBtn setImage:[UIImage imageNamed:@"icon_voice"] forState:UIControlStateNormal];
+        [_mLeftBtn setImage:[UIImage imageNamed:@"icon_keyboard"] forState:UIControlStateSelected];
         _mLeftBtn.selected = NO;
         [_mLeftBtn addTarget:self action:@selector(btnPressed:) forControlEvents:UIControlEventTouchUpInside];
         
