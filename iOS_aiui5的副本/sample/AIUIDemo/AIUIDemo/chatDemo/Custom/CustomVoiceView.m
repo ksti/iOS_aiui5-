@@ -15,7 +15,7 @@
 #import "CustomVoiceSleepingView.h"
 #import "CustomVoiceLoadingView.h"
 
-#import "YSCNewVoiceWaveView.h"
+#import "CustomVoiceWaveView.h"
 
 #define PQ_RADIANS(number)  ((M_PI * number)/ 180)
 #define kRadius 40
@@ -29,7 +29,7 @@
 @property (nonatomic, strong) YSCVoiceWaveView *voiceWaveView;
 @property (nonatomic, strong) UIView *voiceWaveParentView;
 
-@property (nonatomic, strong) YSCNewVoiceWaveView *voiceWaveViewNew;
+@property (nonatomic, strong) CustomVoiceWaveView *voiceWaveViewNew;
 @property (nonatomic,strong) UIView *voiceWaveParentViewNew;
 
 @property (nonatomic, strong) CustomVoiceLoadingView *loadingView;
@@ -372,10 +372,10 @@
     return _voiceWaveParentView;
 }
 
-- (YSCNewVoiceWaveView *)voiceWaveViewNew
+- (CustomVoiceWaveView *)voiceWaveViewNew
 {
     if (!_voiceWaveViewNew) {
-        self.voiceWaveViewNew = [[YSCNewVoiceWaveView alloc] init];
+        self.voiceWaveViewNew = [[CustomVoiceWaveView alloc] init];
         [_voiceWaveViewNew setVoiceWaveNumber:6];
     }
     
